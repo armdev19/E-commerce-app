@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,8 +16,33 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+
+  Widget mImageCarousel = new Container(
+    height: 240.0,
+    child: new Carousel(
+      boxFit: BoxFit.cover,
+      images: [
+        AssetImage("images/carousel/one.jpg"),
+        AssetImage("images/carousel/two.jpg"),
+        AssetImage("images/carousel/three.jpg"),
+        AssetImage("images/carousel/four.jpg"),
+        AssetImage("images/carousel/five.jpg"),
+        AssetImage("images/carousel/six.jpg"),
+        AssetImage("images/carousel/seven.jpg"),
+        AssetImage("images/carousel/eight.jpg"),
+        AssetImage("images/carousel/nine.jpg"),
+        AssetImage("images/carousel/ten.jpg"),
+      ],
+      autoplay: true,
+      animationCurve: Curves.fastOutSlowIn,
+      animationDuration: Duration(milliseconds: 1000),
+    ),
+  );
+
+
     return Scaffold(
       appBar: new AppBar(
+        elevation: 0.1,
         backgroundColor: Colors.red,
         title: Text('Cool shop'),
         actions: <Widget>[
@@ -114,6 +140,12 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
+      ),
+
+      body: new ListView(
+        children: <Widget>[
+          mImageCarousel
+        ],
       ),
     );
   }
