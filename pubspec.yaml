@@ -39,6 +39,7 @@ flutter:
     - images/
     - images/carousel/
     - images/categories/
+    - images/products/
 
   uses-material-design: true
 

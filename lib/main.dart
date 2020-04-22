@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:ecommerceapp/components/HorizontalListView.dart';
+import 'package:ecommerceapp/components/Products.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
 
   Widget mImageCarousel = new Container(
-    height: 240.0,
+    height: 200.0,
     child: new Carousel(
       boxFit: BoxFit.cover,
       images: [
@@ -155,6 +156,15 @@ class _HomePageState extends State<HomePage> {
 
           // Horizontal ListView
           HorizontalListView(),
+
+          new Padding(padding: const EdgeInsets.all(8.0),
+            child: new Text("Recent products"),),
+
+          // Grid View
+          Container(
+            height: 320.0,
+            child: Products(),
+          )
 
         ],
       ),
