@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
       ],
       autoplay: true,
       animationCurve: Curves.fastOutSlowIn,
-      animationDuration: Duration(milliseconds: 1000),
+      animationDuration: Duration(milliseconds: 800),
       dotSize: 4.0,
       indicatorBgPadding: 18.0,
     ),
