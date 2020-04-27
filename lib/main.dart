@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
         AssetImage("images/carousel/nine.jpg"),
         AssetImage("images/carousel/ten.jpg"),
       ],
-      autoplay: true,
+      autoplay: false,
       animationCurve: Curves.fastOutSlowIn,
       animationDuration: Duration(milliseconds: 800),
       dotSize: 4.0,
